@@ -1,0 +1,101 @@
+.game {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.game h1,
+h3,
+p {
+  color: #fff;
+}
+
+.game h1 {
+  font-size: 4rem;
+  margin-bottom: 5rem;
+}
+
+.game p {
+  font-size: 2rem;
+}
+
+.game h3 {
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.game h3 span {
+  font-weight: bold;
+  color: #6bc38b;
+}
+
+.game .points {
+  font-size: 2rem;
+  margin: 10rem 0 2rem;
+}
+
+.game .points span {
+  font-weight: bold;
+  color: #6bc38b;
+}
+
+.wordContainer {
+  margin: 1rem;
+  border: 1rem solid #1ae966;
+  display: flex;
+  margin-top: 5rem;
+  background-color: #fff;
+}
+
+.letter,
+.blackSquare {
+  font-size: 7rem;
+  line-height: 1.5;
+  border: 0.3rem solid #000;
+  height: 10rem;
+  width: 10rem;
+  text-transform: uppercase;
+  background-color: #ccc;
+  color: #000;
+  font-weight: bold;
+}
+
+.letter {
+  text-align: center;
+}
+
+.letterContainer p {
+  margin: 4rem 0 2rem;
+}
+
+.letterContainer form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.letterContainer form input {
+  background-color: #fff;
+  height: 7rem;
+  width: 7rem;
+  font-size: 2rem;
+  text-align: center;
+  margin-right: 3rem;
+}
+
+.letterContainer form button {
+  background-color: #6bc38b;
+  border: none;
+  padding: 2rem 5rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-radius: 6rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.letterContainer form button:hover {
+  background-color: #4ddf82;
+}
