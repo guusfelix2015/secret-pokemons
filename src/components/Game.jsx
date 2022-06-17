@@ -1,18 +1,18 @@
 import "./Game.css";
 
-const Game = ({ pickedWord, pickedCategory, letters }) => {
+const Game = ({ pickedWord, pickedCategory, letters, score }) => {
   return (
     <div className="game">
       <p className="points">
-        Pontuação: <span>0</span>
+        Pontuação: <span>{score}</span>
       </p>
       <h1>Adivinhe o Pokemon:</h1>
       <h3>
-        Dica sobre a palavra: <span>Pokemon de Fogo</span>
+        Dica sobre o Pokemon: <span>Pokemon de {pickedCategory}</span>
       </h3>
       <p>Você ainda tem 3 tentativas</p>
       <div className="wordContainer">
-        <span className="letter">A</span>
+        <span className="letter"></span>
         <span className="blackSquare"></span>
       </div>
       <div className="letterContainer">

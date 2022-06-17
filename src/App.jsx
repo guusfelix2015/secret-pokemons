@@ -20,14 +20,14 @@ const App = () => {
   const [pickedCategory, setPickedCategory] = useState("");
   const [letters, setLetters] = useState([]);
 
-  const changeStageForGame = () => {
-    setStage(stages[1].stage);
-  };
+  const [score, setScore] = useState(0);
 
-  const pickedRandonCategoryAndWord = () => {
+  const pickedRandomCategoryAndWord = () => {
     const categories = Object.keys(pokemonWords);
+
     const randomIndexCategory =
       categories[Math.floor(Math.random() * categories.length)];
+
     const randomIndexWordPokemon =
       pokemonWords[randomIndexCategory][
         Math.floor(Math.random() * [randomIndexCategory].length)
@@ -37,7 +37,8 @@ const App = () => {
 
   const startGame = () => {
     const { randomIndexCategory, randomIndexWordPokemon } =
-      pickedRandonCategoryAndWord();
+      pickedRandomCategoryAndWord();
+
     let letters = randomIndexWordPokemon.split("");
     letters = letters.map((letter) => letter.toLowerCase());
 
@@ -57,6 +58,7 @@ const App = () => {
           pickedWord={pickedWord}
           pickedCategory={pickedCategory}
           letters={letters}
+          score={score}
         />
       )}
     </div>
