@@ -17,7 +17,7 @@
 </ul>
 
 <h2>Clique aqui e visite a aplicação:</h2>
-<a href="https://calculateimcjs.netlify.app/" target="_blank">Word Pokemon Secret</a>
+<a href="https://beautiful-crostata-72a5f0.netlify.app/" target="_blank">Word Pokemon Secret</a>
 
 <br>
 </br>
