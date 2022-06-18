@@ -1,6 +1,6 @@
 import "./Game.css";
 
-const Game = ({ pickedWord, pickedCategory, letters, score }) => {
+const Game = ({ pickedWord, pickedCategory, letters, score, guesses }) => {
   return (
     <div className="game">
       <p className="points">
@@ -10,7 +10,7 @@ const Game = ({ pickedWord, pickedCategory, letters, score }) => {
       <h3>
         Dica sobre o Pokemon: <span>Pokemon de {pickedCategory}</span>
       </h3>
-      <p>Você ainda tem 3 tentativas</p>
+      <p>Você ainda tem {guesses} tentativas</p>
       <div className="wordContainer">
         <span className="letter"></span>
         <span className="blackSquare"></span>
