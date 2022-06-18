@@ -14,7 +14,6 @@ const Game = ({
   const [letter, setLetter] = useState("");
   const letterInputRef = useRef(null);
 
-  console.log(letters);
   const handleSubmit = (e) => {
     e.preventDefault();
 
