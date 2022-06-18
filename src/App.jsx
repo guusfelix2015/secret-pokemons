@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 
 import StartGame from "./components/StartGame";
 import Game from "./components/Game";
+import GameOver from "./components/GameOver";
 
 import { pokemonsList } from "./data/pokemons";
 
@@ -54,18 +55,68 @@ const App = () => {
     setStage(stages[1].stage);
   };
 
+  const verifyLetter = (letter) => {
+    const normalizeLetter = letter.toLowerCase();
+
+    if (
+      guessedLetters.includes(normalizeLetter) ||
+      wrongLetters.includes(normalizeLetter)
+    ) {
+      return;
+    }
+
+    if (letters.includes(normalizeLetter)) {
+      setGuessedLetters((actualGuessedLetters) => [
+        ...actualGuessedLetters,
+        normalizeLetter,
+      ]);
+    } else {
+      setWrongLetters((actualWrongLetters) => [
+        ...actualWrongLetters,
+        normalizeLetter,
+      ]);
+      setGuesses((actualGuesses) => actualGuesses - 1);
+    }
+  };
+
+  useEffect(() => {
+    if (guesses <= 0) {
+      setStage(stages[0].stage);
+    }
+  }, [guesses]);
+
+  const endGame = () => {
+    setStage(stages[2].stage);
+  };
+
+  const clearLettersStates = () => {
+    setGuessedLetters([]);
+    setWrongLetters([]);
+  };
+
+  const restartGame = () => {
+    setScore(0);
+    setGuesses(3);
+    setStage(stages[0].stage);
+  };
+
   return (
     <div className="App">
       {gameStage === "start" && <StartGame startGame={startGame} />}
       {gameStage === "game" && (
         <Game
+          verifyLetter={verifyLetter}
           pickedWord={pickedWord}
           pickedCategory={pickedCategory}
           letters={letters}
           score={score}
           guesses={guesses}
+          guessedLetters={guessedLetters}
+          wrongLetters={wrongLetters}
+          endGame={endGame}
         />
       )}
+      {gameStage === "gameOver" && <GameOver restartGame={restartGame} />}
     </div>
   );
 };
