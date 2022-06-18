@@ -49,8 +49,6 @@ const App = () => {
     let letters = randomIndexWordPokemon.split("");
     letters = letters.map((letter) => letter.toLowerCase());
 
-    console.log(letters, randomIndexCategory, randomIndexWordPokemon);
-
     setPickedCategory(randomIndexCategory);
     setPickedWord(randomIndexWordPokemon);
     setLetters(letters);
