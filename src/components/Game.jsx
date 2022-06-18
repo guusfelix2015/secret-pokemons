@@ -8,13 +8,13 @@ const Game = ({
   letters,
   score,
   guesses,
-  endGame,
   guessedLetters,
   wrongLetters,
 }) => {
   const [letter, setLetter] = useState("");
   const letterInputRef = useRef(null);
 
+  console.log(letters);
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -26,7 +26,6 @@ const Game = ({
 
   return (
     <div className="game">
-      <button onClick={endGame}>voltar inicio</button>
       <p className="points">
         Pontuação: <span>{score}</span>
       </p>

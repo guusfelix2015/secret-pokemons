@@ -98,3 +98,8 @@ p {
 .letterContainer form button:hover {
   background-color: #4ddf82;
 }
+
+.wrongLettersContainer span {
+  font-size: 2rem;
+  color: #fff;
+}

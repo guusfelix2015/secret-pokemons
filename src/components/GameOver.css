@@ -1,0 +1,40 @@
+.containerGameOver {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 10rem;
+}
+
+.containerGameOver h1 {
+  color: #fff;
+  font-size: 4rem;
+  margin-bottom: 5rem;
+}
+
+.containerGameOver p {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 4rem;
+}
+
+.containerGameOver span {
+  color: #6bc38b;
+  font-weight: bold;
+}
+
+.containerGameOver button {
+  background-color: #6bc38b;
+  border: none;
+  padding: 2rem 3rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-radius: 6rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.containerGameOver button:hover {
+  background-color: #4ddf82;
+}

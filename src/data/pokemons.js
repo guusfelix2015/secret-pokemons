@@ -39,4 +39,38 @@ export const pokemonsList = {
     "Electabuzz",
     "Jolteon",
   ],
+  lutador: [
+    "Mankey",
+    "Primeape",
+    "Poliwrath",
+    "Machop",
+    "Machoke",
+    "Machamp",
+    "Hitmonlee",
+    "Hitmonchan",
+  ],
+
+  fantasma: [
+    "Misdreavus",
+    "Shuppet",
+    "Banette",
+    "Duskull",
+    "Dusclops",
+    "Dusknoir",
+    "Sinistea",
+    "Polteageist",
+    "Spectrier",
+  ],
+
+  lendario: [
+    "Landorus",
+    "Groudon",
+    "Lunala",
+    "Xerneas",
+    "Mewtwo",
+    "Rayquaza",
+    "Zacian",
+    "Suicune",
+    "Lugia",
+  ],
 };
