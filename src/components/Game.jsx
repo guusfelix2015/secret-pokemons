@@ -30,7 +30,7 @@ const Game = ({
       </p>
       <h1>Adivinhe o Pokemon:</h1>
       <h3>
-        Dica sobre o Pokemon: <span>Pokemon de {pickedCategory}</span>
+        Dica sobre o Pokemon: <span>Pokemon tipo {pickedCategory}</span>
       </h3>
       <p>Você ainda tem {guesses} tentativas</p>
       <div className="wordContainer">
