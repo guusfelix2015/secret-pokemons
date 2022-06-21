@@ -104,7 +104,7 @@ const App = () => {
 
   const restartGame = () => {
     setScore(0);
-    setGuesses(3);
+    setGuesses(6);
     setStage(stages[0].stage);
   };
 
